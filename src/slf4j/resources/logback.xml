@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<!--ch.qos.logback.classic.PatternLayout参考源码 -->
+	<!--%d 别名date 当前时间 -->
+	<!--%r 别名relative 相对时间 -->
+	<!--%p 别名level,le 日志级别 -->
+	<!--%t 别名thread 线程名 -->
+	<!-- %c 别名logger,lo 日志组名称 -->
+	<!--%m 别名msg,message 消息内容 -->
+	<!--%C 别名class 类名 -->
+	<!--%M 别名method 方法名 -->
+	<!--%L 别名line 行号 -->
+	<!--%F 别名file 文件民 -->
+	<!--%ex 别名exception,throwable 异常信息 -->
+	<!--%n 换行 -->
+	<!-- 自定义输出配置,名称为console -->
+	<appender name="console"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>%m %ex%n %C.%M\(%F:%L\)%n</Pattern>
+		</layout>
+	</appender>
+	<!-- 自定义输出配置,名称为file -->
+	<appender name="file"
+		class="ch.qos.logback.core.FileAppender">
+		<Encoding>UTF-8</Encoding>
+		<File>test.log</File>
+		<Append>false</Append>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %m %ex%n %C.%M\(%F:%L\)%n</Pattern>
+		</layout>
+	</appender>
+
+	<!-- 配置局部 -->
+	<logger name="cn.zhg.testlog" level="TRACE">
+	<!-- 	<appender-ref ref="file" /> -->	 
+	</logger>
+
+	<!-- 配置全局 -->
+	<root level="debug">
+	 <appender-ref ref="console" /> 
+	</root>
+</configuration>
