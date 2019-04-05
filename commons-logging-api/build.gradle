@@ -1,5 +1,4 @@
-println 'commons-logging默认使用java.util.logging'
 dependencies {
 	// 使用commons-logging,默认使用java.util.logging
-	compile "commons-logging:commons-logging:$aclVersion"
+	implementation "commons-logging:commons-logging:$aclVersion"
 }
