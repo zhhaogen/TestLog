@@ -1,0 +1,9 @@
+dependencies {
+	implementation (project(":slf4j-api")){
+		//排除掉,因为使用的slf4j-api不一样
+		exclude group:"org.slf4j",module:"slf4j-api"
+	}
+	//slf4j使用logback,使用logback.xml配置输出
+	//1.2改动logback.xml ,如layout已过期,使用encoder
+	implementation "ch.qos.logback:logback-classic:1.2.3"
+}

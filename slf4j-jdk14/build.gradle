@@ -1,0 +1,5 @@
+dependencies {
+//slf4j使用java.util.logging
+	implementation project(":slf4j-api")
+	implementation "org.slf4j:slf4j-jdk14:$slf4jVersion"
+}

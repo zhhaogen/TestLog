@@ -1,0 +1,5 @@
+dependencies {
+	implementation (project(":jboss-logging"))
+ 	 //使用log4j-core
+	implementation "org.apache.logging.log4j:log4j-core:$log4j2Version"
+}

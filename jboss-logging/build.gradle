@@ -1,0 +1,4 @@
+dependencies {
+ 	//自动加载JBossLogManager > Log4j 2 >Log4j >Slf4j >JDK ,参考org.jboss.logging.LoggerProviders#find
+	 implementation "org.jboss.logging:jboss-logging:$jblVersion" 
+}

@@ -1,36 +1,13 @@
-apply plugin: 'java'
-repositories {
-    jcenter()
-}
-dependencies {
-	//  String slf4jVersion="1.8.0-beta2"
-	//单单api什么也不输出
-	// compile "org.slf4j:slf4j-api:$slf4jVersion"
-	//使用log4j12,可以使用log4j.properties配置输出
-	// compile "org.slf4j:slf4j-log4j12:$slf4jVersion"
-	//slf4j使用java.util.logging
-	//  compile "org.slf4j:slf4j-jdk14:$slf4jVersion"
-	//slf4j使用logback,使用logback.xml配置输出
-	//compile "ch.qos.logback:logback-classic:1.0.12"
-	//1.2改动
- 	//compile "ch.qos.logback:logback-classic:1.2.3"
-	
-	// 使用commons-logging,默认使用java.util.logging
-	//  compile "commons-logging:commons-logging:1.2"
-	//commons-logging使用slf4j-log4j12,无需额外配置,同单独使用slf4j-log4j12一样,但不支持其他slf4j-*
-	
-	String log4j2Version="2.11.0"
-	//单单api,默认使用org.apache.logging.log4j.simple.SimpleLogger
-	//这里默认全局配置log4j2.component.properties参考org.apache.logging.log4j.util.PropertiesUtil,没有引入core时默认使用SimpleLoggerContextFactory,SimpleLogger默认配置log4j2.simplelog.properties参考org.apache.logging.log4j.simple.SimpleLoggerContext
-	 //compile "org.apache.logging.log4j:log4j-api:$log4j2Version"
-	//引入核心后,配置文件参考https://logging.apache.org/log4j/2.x/manual/configuration.html
-	//配置加载参见org.apache.logging.log4j.core.config.ConfigurationFactory.Factory#getConfiguration
-	 compile "org.apache.logging.log4j:log4j-core:$log4j2Version"
-	//commons-logging使用log4j2
-	//compile "org.apache.logging.log4j:log4j-jcl:$log4j2Version"
-	//sl4j使用log4j2
-	//compile "org.apache.logging.log4j:log4j-slf4j-impl:$log4j2Version"
-	//java.util.logging使用log4j2,需要System.setProperty("java.util.logging.manager", "org.apache.logging.log4j.jul.LogManager") ,参考https://logging.apache.org/log4j/2.x/log4j-jul/index.html
-	 compile "org.apache.logging.log4j:log4j-jul:$log4j2Version"
-}
+allprojects{
 
+}
+subprojects{ 
+		apply plugin: 'java'  
+		apply plugin: 'java-library'
+		sourceCompatibility = 1.8
+		repositories {
+		    jcenter()
+		}
+		dependencies{ 
+		}
+} 

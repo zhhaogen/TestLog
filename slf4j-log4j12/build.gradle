@@ -1,0 +1,5 @@
+dependencies {
+	implementation project(":slf4j-api")
+	//使用log4j12,可以使用log4j.properties配置输出
+	implementation "org.slf4j:slf4j-log4j12:$slf4jVersion"
+}

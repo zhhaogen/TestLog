@@ -1,0 +1,6 @@
+println 'commons-logging加log4j2组合'
+dependencies {
+	compile "org.apache.logging.log4j:log4j-core:$log4j2Version"
+	//commons-logging使用log4j2
+	compile "org.apache.logging.log4j:log4j-jcl:$log4j2Version"
+}

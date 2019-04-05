@@ -1,0 +1,4 @@
+dependencies {
+	//单单api什么也不输出
+	implementation "org.slf4j:slf4j-api:$slf4jVersion"
+}

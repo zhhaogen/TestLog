@@ -1,0 +1,3 @@
+dependencies { 
+	implementation (project(":log4j2-simplelog"))
+}

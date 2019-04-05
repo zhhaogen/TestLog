@@ -1,0 +1,8 @@
+dependencies {
+	compile (project(":slf4j-api")){
+		//排除掉,因为使用的slf4j-api不一样
+		exclude group:"org.slf4j",module:"slf4j-api"
+	}
+	//slf4j使用logback,使用logback.xml配置输出
+	compile "ch.qos.logback:logback-classic:1.0.12"
+}

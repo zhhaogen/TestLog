@@ -1,0 +1,8 @@
+dependencies {
+	 //这里默认全局配置log4j2.component.properties
+	 //参考org.apache.logging.log4j.util.PropertiesUtil,
+	 //没有引入core时默认使用SimpleLoggerContextFactory,SimpleLogger
+	 //默认配置log4j2.simplelog.properties
+	 //参考org.apache.logging.log4j.simple.SimpleLoggerContext
+	implementation "org.apache.logging.log4j:log4j-api:$log4j2Version"
+}

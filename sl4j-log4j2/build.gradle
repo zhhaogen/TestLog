@@ -1,0 +1,10 @@
+dependencies {
+	implementation (project(":slf4j-api")){
+		//排除掉,因为使用的slf4j-api不一样
+		exclude group:"org.slf4j",module:"slf4j-api"
+	}
+	//slf4j使用log4j2
+	implementation "org.apache.logging.log4j:log4j-slf4j-impl:$log4j2Version"
+	//使用log4j-core作为log4j2输出
+	implementation "org.apache.logging.log4j:log4j-core:$log4j2Version"
+}

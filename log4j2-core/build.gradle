@@ -1,0 +1,6 @@
+dependencies { 
+	implementation (project(":log4j2-api"))
+	//引入核心后,配置文件参考https://logging.apache.org/log4j/2.x/manual/configuration.html
+	//配置加载参见org.apache.logging.log4j.core.config.ConfigurationFactory.Factory#getConfiguration
+	implementation "org.apache.logging.log4j:log4j-core:$log4j2Version"
+}

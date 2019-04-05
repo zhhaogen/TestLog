@@ -1,0 +1,39 @@
+{"configuration": {
+	"loggers":{
+		"Logger":[//不区分大小写
+			{
+				"name":"cn.zhg.testlog",
+				"level":"debug",
+				"additivity":"false",
+				"AppenderRef":[//多个使用数组
+					{"ref":"myConsole"},
+					{"ref":"myFile"}
+				]
+			}
+		],
+		"root":{
+			"level":"debug",
+			"AppenderRef":{//单个使用object
+				"ref":"myConsole"
+			}
+		}
+	},
+	"appenders": {
+		"Console":{
+			"name":"myConsole",
+			"target":"SYSTEM_OUT",
+			"PatternLayout":{
+				"pattern":"%m%ex%n %l%n"
+			}
+		},
+		"File":{
+			"name":"myFile",
+			"fileName":"test.log",
+			"append":"false",
+			"PatternLayout":{
+				"pattern":"%d{yyyy-MM-dd HH:mm:ss.SSS} %m%ex%n %l%n"
+			}
+		}
+	}
+
+}}

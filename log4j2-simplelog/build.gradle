@@ -1,0 +1,6 @@
+dependencies { 
+	implementation (project(":log4j2-api"))
+	 //没有引入core时默认使用SimpleLoggerContextFactory,SimpleLogger
+	 //默认配置log4j2.simplelog.properties
+	 //参考org.apache.logging.log4j.simple.SimpleLoggerContext 
+}

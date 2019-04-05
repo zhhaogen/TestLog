@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration strict="true">
+	<Appenders>
+		<!-- 自定义输出配置,Console元素对应org.apache.logging.log4j.core.appender.ConsoleAppender -->
+		<!-- 必须strict为true,type对应@Plugin#name而非类名 -->
+		<Appender name="color_console" type="Console">
+			<Layout type="PatternLayout"
+				disableAnsi="false"
+				pattern="%highlight{%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n}" />
+		</Appender> 
+	</Appenders>
+	<Loggers>
+		<!-- 配置局部 -->
+		<!-- additivity为false,不重复输出 -->
+		<Logger name="cn.zhg.testlog" level="debug" additivity="false">
+			<AppenderRef ref="color_console" /> 
+		</Logger>
+		<!-- 配置全局 -->
+		<Root level="info">
+			<AppenderRef ref="color_console" />
+		</Root> 
+	</Loggers>
+</Configuration>

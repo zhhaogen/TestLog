@@ -1,0 +1,6 @@
+dependencies { 
+	implementation (project(":log4j2-core"))
+	//jackjson依赖
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.9.8'
+	
+}
